@@ -114,5 +114,5 @@ def model_info() -> Dict[str, Any]:
         return jsonify({"error": f"Failed to get model info: {str(e)}"}), 500
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
