@@ -1,4 +1,4 @@
-from _future_ import annotations
+from __future__ import annotations
 
 import json
 from pathlib import Path
@@ -8,7 +8,7 @@ import joblib
 import pandas as pd
 from flask import Flask, jsonify, request
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # Global model artifact (loaded once at startup)
 MODEL_ARTIFACT = None
@@ -106,7 +106,7 @@ def model_info() -> Dict[str, Any]:
         )
 
         return jsonify({
-            "model_type": type(model)._name_,
+            "model_type": type(model).__name__,
             "feature_names": feature_names,
             "model_params": getattr(model, 'get_params', lambda: {})()
         })
