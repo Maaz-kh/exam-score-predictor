@@ -3,7 +3,7 @@
 A machine learning project that predicts student exam scores based on study hours and exam difficulty.
 
 ## Project Structure
-
+## Project
 ```
 .
 ├── .github/           # GitHub Actions workflows
